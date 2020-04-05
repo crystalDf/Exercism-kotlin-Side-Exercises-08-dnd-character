@@ -13,7 +13,7 @@ class DndCharacter {
     companion object {
 
         fun ability(): Int {
-            return generateSequence { (1..6).shuffled().first() }.take(4)
+            return generateSequence { (1..6).random() }.take(4)
                     .sortedDescending().take(3).sum()
         }
 
